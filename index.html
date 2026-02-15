@@ -2,12 +2,45 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>layered-gsap-typography-effect</title>
+    <title>Layered Text Scroll Reveal with GSAP ScrollTrigger</title>
+    <!-- Inter Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/src/style.css" />
   </head>
-  <body>
-    <div id="app"></div>
+
+  <body class="text-scroll-body bg-black text-white">
+    <!-- Top Spacer -->
+    <div class="h-screen"></div>
+
+    <!-- Main Effect Section -->
+    <section class="text-scroll-section">
+      <div class="text-scroll-container">
+        <h1 class="text-scroll-heading">
+          <!-- Base Layer (Static, Low Opacity) -->
+          <div class="text-scroll-layer text-scroll-layer--base">
+            This layered
+            <strong class="text-white">typography scroll</strong> animation is
+            powered by GSAP ScrollTrigger and styled with Tailwind CSS. Scroll
+            down to see each line progressively reveal on scroll.
+          </div>
+
+          <!-- Reveal Layer (Animated) -->
+          <div class="text-scroll-layer text-scroll-layer--reveal">
+            This layered
+            <strong class="text-white">typography scroll</strong> animation is
+            powered by GSAP ScrollTrigger and styled with Tailwind CSS. Scroll
+            down to see each line progressively reveal on scroll.
+          </div>
+        </h1>
+      </div>
+    </section>
+
+    <div class="h-screen"></div>
+
     <script type="module" src="/src/main.ts"></script>
   </body>
 </html>

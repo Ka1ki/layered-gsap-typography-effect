@@ -1,4 +1,48 @@
 @import "tailwindcss";
+@import "lenis/dist/lenis.css";
 
-@theme {
+/* ==========================================================================
+   Base Styles
+   ========================================================================== */
+
+body {
+  font-family: "Inter", sans-serif;
+}
+
+/* ==========================================================================
+   Layout Components
+   ========================================================================== */
+
+.text-scroll-section {
+  @apply min-h-screen flex items-center justify-center px-[5%] relative text-black bg-red-500;
+}
+
+.text-scroll-container {
+  @apply relative max-w-5xl;
+}
+
+.text-scroll-heading {
+  @apply relative text-5xl leading-[1.2] tracking-[-0.02em] font-bold;
+}
+
+/* ==========================================================================
+   Layer System
+   ========================================================================== */
+
+.text-scroll-layer--base {
+  @apply opacity-20;
+}
+
+.text-scroll-layer--reveal {
+  @apply absolute inset-0;
+}
+
+/* ==========================================================================
+   Animation Components
+   ========================================================================== */
+.text-scroll-reveal-line {
+  --clip: 100%;
+  display: block;
+  clip-path: inset(0 var(--clip) 0 0);
+  will-change: clip-path;
 }
